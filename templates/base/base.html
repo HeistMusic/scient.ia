@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Scient.ia">
+		<meta name="author" content="Scient.ia">
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="shortcut icon" href="{% static 'images/fav.png' %}">
+    {% include 'base/css.html' %}
+        <style>
+        body{
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        </style>
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+{% with request.resolver_match.url_name as url_name %}
+{% autoescape off %}
+
+    {% include 'base/header.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'base/footer.html' %}
+
+    {% include 'base/js.html' %}
+
+    {% block script %}
+    {% endblock %}
+
+{% endautoescape %}
+{% endwith %}
+</body>
+</html>

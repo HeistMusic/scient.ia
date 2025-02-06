@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-light bg-white position-fixed w-100">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=""><img class="header-logo" alt="" height="80px" src=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
